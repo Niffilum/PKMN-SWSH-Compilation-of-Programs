@@ -28,110 +28,105 @@ these buttons for our use.
 // - :zensuck:
 
 static const Command rollHoster[] = {
-	//----------setup[0,8]----------
+	//----------setup[0,5]----------
 	// connect controller in change grip/order
-	{NOTHING,  30},
-	{TRIGGERS,  1},	{NOTHING,  30},
-	{A,         1},	{NOTHING,  40},
-	{B,         1},	{NOTHING,  40},
-	{HOME,      1},	{NOTHING,  50},
+	{NOTHING, 30},
+	{TRIGGERS, 30},
+	{A, 40},
+	{B, 40},
+	{HOME, 1},
+	{NOTHING, 30},
 	
-	//----------collect watts[9,16]----------
-	{A,        20},	{NOTHING,   1}, 
-	{A,         6},	{NOTHING,   1}, 
-	{A,        30},	{NOTHING,   1}, 
-	{A,       120},	{NOTHING,   1}, 
+	//----------collect watts[5,12]----------
+	{A, 20}, {NOTHING, 1},	 
+	{A, 6}, {NOTHING, 1},	
+	{A, 50}, {NOTHING, 1},	 
+	{A, 120},	
 	
-	//----------date & time[17,48]----------
-	{HOME,      1},	{NOTHING,  20},
-	{DOWN,      1},	{NOTHING,   1},
-	{RIGHT,     1},	{NOTHING,   1},
-	{RIGHT,     1},	{NOTHING,   1},
-	{RIGHT,     1},	{NOTHING,   1},
-	{RIGHT,     1},	{NOTHING,   1},
-	{A,         1},	{NOTHING,   1},
-	{DOWN,     80},	{NOTHING,   1},
-	{A,         1},	{NOTHING,   1},
-	{DOWN,      1},	{NOTHING,   1},
-	{DOWN,      1},	{NOTHING,   1},
-	{DOWN,      1},	{NOTHING,   1},
-	{DOWN,      1},	{NOTHING,   1},
-	{A,         1},	{NOTHING,   8},
-	{DOWN,      1},	{NOTHING,   1},
-	{DOWN,      1},	{NOTHING,   1},
+	// date and time [13,24]
+	{HOME, 5}, {NOTHING, 5},
+	{DOWN, 20},	
+	{RIGHT, 25}, {LEFT, 5},	
+	{A, 5},	
+	{DOWN, 80},	
+	{A, 5},	
+	{DOWN, 25},	{NOTHING, 5},
+	{A, 5},
+	{DOWN, 20},
+	
+	// roll 3 day back [25,33]
+	{A, 5},
+	{NOTHING, 5}, {DOWN, 1},
+	{NOTHING, 5}, {DOWN, 1},
+	{NOTHING, 5}, {DOWN, 1},
+	{RIGHT, 28},
+	{A, 5},	
+	
+	// roll 1 day forward [34,38]
+	{A, 1},	{NOTHING, 5},
+	{UP, 2},	
+	{RIGHT, 28},
+	{A, 1},	
+	
+	//----------back to game[39,43]----------
+	{NOTHING, 4},	
+	{HOME, 1},{NOTHING, 30}, 
+	{HOME, 1},
+	
+	// quit the raid [44,46]
+	{NOTHING, 20}, 
+	{B, 32},
+	{A,       200},	{NOTHING, 1},
 
-	//----------roll 3 days backward[49,60]----------
-	{A,         1},	{NOTHING,   7},
-	{DOWN,      1},	{NOTHING,   1},
-	{DOWN,      1},	{NOTHING,   1},
-	{DOWN,      1},	{NOTHING,   1},
-	{RIGHT,    28},	{NOTHING,   1},
-	{A,         1},	{NOTHING,   4},
+	//--------- start raid [47,74]------------
 	
-	//----------roll 1 day forward[61,68]----------
-	{A,         1},	{NOTHING,   7},
-	{UP,        1},	{NOTHING,   1},
-	{RIGHT,    28},	{NOTHING,   1},
-	{A,         1},	{NOTHING,   4},
-	
-	//----------back to game[69,76]----------
-	{HOME,      1},	{NOTHING,  30},
-	{HOME,      1},	{NOTHING,  20},
-	
-	// quit the raid
-	{B,        32},	{NOTHING,   1},
-	{A,       200},	{NOTHING,   1},  
-	
-	//----------host den[77,124]----------
+	// collect watts and check current mon [47,54]
 	{A,        12},	{NOTHING,   1}, 
 	{A,         6},	{NOTHING,   1}, 
 	{A,        30},	{NOTHING, 135}, 
 	{B,         1},	{NOTHING, 135},
-	{Y,         5}, {NOTHING,  50},
 	
-	// going online
-	{PLUS,      5},	{NOTHING, 700}, // 45 = 1 second
-	{B,         5}, {NOTHING,  10},
-	{B,         5},	{NOTHING,  30},
-	{B,         5}, {NOTHING, 175}, 
+	// connect to internet [55,61]
+	{Y, 50},
+	{PLUS, 500},		// Internet connection time (400 ~= 9 seconds wait)
+	{B, 1},
+	{NOTHING, 6}, 
+	{B, 140},			// Allow time to load other players
+	{A, 1},				// Interact with den
+	{NOTHING, 200}, 
 	
-	// entering den
-	{A,         5}, {NOTHING, 150}, 
-	{A,         5},	{NOTHING, 150}, 
+	// Inside the lobby [62,69]
+	{A, 2500},			// (5200 ~= until 1 min, 2600 ~= until 2 min)
+	{UP, 2},	
+	{A, 1},	
+	{NOTHING, 20},
+	{A, 50},	
+	{NOTHING, 1},
+	{A, 1},				
+	{NOTHING, 500},
 	
-	// waiting for others
-	{NOTHING,  3250}, // 45 = 1 second
-	{UP,        5},	{NOTHING,   5},
-	{A,         5}, {NOTHING,  15},
+	// close game [70,74]
+	{HOME, 1},
+	{NOTHING, 40},
+	{X, 9},			// Close game
+	{A, 1},			// Comfirm close game
+	{NOTHING, 120},
 	
-	// spamming A for prompts
-	{A,         5},	{NOTHING,  30},
-	{A,         5},	{NOTHING,   5},
-	{A,         5},	{NOTHING,   5},
-	{A,         5},	{NOTHING,   5},
-	{A,         5},	{NOTHING,   5},
-	{A,         5},	{NOTHING,   5},
-	{A,         5},	{NOTHING,   5}, 
-	{HOME,      1},	{NOTHING,  15},	
-	
-	// soft reset
-	{NOTHING, 450}, 
-	{X,         6}, {NOTHING,   8}, // close game
-	{A,         1}, {NOTHING, 135}, // confirm 
-	
-	//----------start game[125,151]----------
-	
+	// add ONE friend Request [75,95]
+	{NOTHING, 15},
+	{HOME, 1},      {NOTHING, 35},
 	{UP, 1},        {NOTHING, 55},
-	{A, 5},         {NOTHING, 105},
+	{A, 5},         {NOTHING, 55},
 	{DOWN, 50},     {NOTHING, 5},
 	{UP, 1},        {NOTHING, 5},
 	{RIGHT, 5},     {NOTHING, 5},
 	{A, 5},         {NOTHING, 55},
-	{A, 5},         {NOTHING, 5},
-	{A, 5},         {NOTHING, 5},
+	{A, 5},         {NOTHING, 105},
+	{A, 5},         {NOTHING, 105},
 	{A, 5},         {NOTHING, 200},
-	{HOME, 1},      {NOTHING, 25},
-
+	
+	//reset [96,103]
+	{HOME,      1},	{NOTHING,  35}, 
 	{A,         1}, {NOTHING,  50}, // choose game 	
 	{A,         1},	{NOTHING, 720}, // pick user
 	{A,         1},	{NOTHING, 460} // enter game
@@ -266,7 +261,7 @@ int durationCount = 0;
 
 // setup
 int commandIndex = 0;
-int m_endIndex = 8;
+int m_endIndex = 5;
 int m_sequence = 0;
 
 // Prepare the next report for the host.
@@ -297,53 +292,47 @@ void GetNextReport(USB_JoystickReport_Input_t* const ReportData) {
 				m_sequence++;
 				if (m_sequence == 13)
 				{
-					// done skipping 3 days
-					commandIndex = 77;
-					m_endIndex = 124;
+					// done skipping 3 days, starting raid and then close game
+					commandIndex = 47;
+					m_endIndex = 74;
 				}
 				else if (m_sequence == 15)
 				{
 					// roll 3 days backward
-					commandIndex = 49;
-					m_endIndex = 60;
+					commandIndex = 25;
+					m_endIndex = 33;
 				}
 				else if (m_sequence == 16)
 				{
-					// add friend
-					commandIndex = 125;
-					m_endIndex = 145;
-				}
-				else if (m_sequence == 17)
-				{
-					// open game
-					commandIndex = 146;
-					m_endIndex = 151;
+					//  add friend and restart game
+					commandIndex = 75;
+					m_endIndex = 103;
 					
 					m_sequence = 0;
 				}
 				else if (m_sequence % 4 == 1)	// 1,5,9
 				{
 					// collect watts and invite others
-					commandIndex = 9;
-					m_endIndex = 16;
+					commandIndex = 5;
+					m_endIndex = 12;
 				}
 				else if (m_sequence % 4 == 2)	// 2,6,10,14
 				{
 					// date & time
-					commandIndex = 17;
-					m_endIndex = 48;
+					commandIndex = 13;
+					m_endIndex = 24;
 				}
 				else if (m_sequence % 4 == 3)	// 3,7,11
 				{
 					// roll one day forward
-					commandIndex = 61;
-					m_endIndex = 68;
+					commandIndex = 34;
+					m_endIndex = 38;
 				}
 				else if (m_sequence % 4 == 0)	// 4,8,12
 				{
 					// back to game
-					commandIndex = 69;
-					m_endIndex = 76;
+					commandIndex = 39;
+					m_endIndex = 46;
 				}
 			}
 		
