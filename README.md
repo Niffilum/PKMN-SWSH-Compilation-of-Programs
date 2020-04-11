@@ -37,7 +37,9 @@ board software
 - FriendAeroAutoHost (Added a feature to add the latest Friend Request on Switch)
 - FriendAutoHost (Added a feature to add the latest Friend Request on Switch)
 - FriendrollHoster (Added a feature to add the latest Friend Request on Switch)
-
+- CodeFriendRollHoster (Added a static link code (4400) to the FriendrollHoster)
+- CodeRollHoster (Has the static link code (4400) but not the add friend feature)
+- 
 ## thanks & credits
 [progmem](https://github.com/progmem/Switch-Fightstick)
 
