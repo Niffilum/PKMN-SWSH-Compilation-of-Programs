@@ -39,7 +39,12 @@ board software
 - FriendrollHoster (Added a feature to add the latest Friend Request on Switch)
 - CodeFriendRollHoster (Added a static link code (4400) to the FriendrollHoster)
 - CodeRollHoster (Has the static link code (4400) but not the add friend feature)
-- 
+
+## How to use
+# Flashing The programs and basic tutorial 
+Made by Brianuu 
+-https://www.youtube.com/watch?v=y2xFf7e_KSU&t=557s
+
 ## thanks & credits
 [progmem](https://github.com/progmem/Switch-Fightstick)
 
