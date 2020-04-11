@@ -41,7 +41,7 @@ board software
 - CodeRollHoster (Has the static link code (4400) but not the add friend feature)
 
 ## How to use
-# Flashing The programs and basic tutorial 
+### Flashing The programs and basic tutorial 
 Made by Brianuu 
 -https://www.youtube.com/watch?v=y2xFf7e_KSU&t=557s
 
