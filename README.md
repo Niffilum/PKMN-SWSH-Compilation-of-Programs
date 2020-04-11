@@ -45,6 +45,9 @@ board software
 Made by Brianuu 
 -https://www.youtube.com/watch?v=y2xFf7e_KSU&t=557s
 
+Please go to [Split's](https://github.com/spl-t/swsh-auto-host) and [BrianuuuSonic's](https://www.youtube.com/user/brianuuusonic2) respective to know how to use their codes. All I did was add features and compile them in one folder
+
+
 ## thanks & credits
 [progmem](https://github.com/progmem/Switch-Fightstick)
 
