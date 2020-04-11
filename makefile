@@ -31,6 +31,7 @@
 # BoxRelease: Release all pokemon in PC boxes
 # CampFriendHoster
 # CampHoster
+# AeroAutoHost
 # FriendAeroAutoHost
 # FriendAutoHost
 # FriendRollHoster
