@@ -1,5 +1,4 @@
-# CURRENTLY WORK IN PROGRESS
-The only code available for now is for the 5140 Egg group
+# This is a Compilation, I don't dare to take credit for things that are not mine.
 
 
 # required software
@@ -13,36 +12,28 @@ board software
 
 - teensy: https://www.pjrc.com/teensy/loader_win10.html
 
-# Auto Breeding
 
-Prerequisites:
-- Route 5 Nursery
-- Cursor in menu must be in map
-- Have 6 pokemon in party
-- Text speed: Fast
-- Nickname:NO
-- Box: Manual
+## Codes written by [brianuuuSonic](https://www.youtube.com/watch?v=y2xFf7e_KSU)
 
-Note: Poke Menu must be closed and you are in the overworld
-Plug it in on the Change Grip/Order Menu in switch Home
+- Autohost (Hard Lock, SR Method)
+- DaySkipper (Frame Skipping)
+- 3 Day Skipper (Rolling Den)
+- AutoFossil 
+- AutoLotto (masterball farming)
+- Watt Farmer
+- TurboA (digging bros etc.)
+- Berry Farmer
+- Auto Box Release
 
-## other useful tools created by [brianuuuSonic](https://www.youtube.com/watch?v=y2xFf7e_KSU)
+## Codes written by [SPLIT](https://github.com/spl-t/swsh-auto-host)
 
-- autohost (hardlock)
-- day skipper (frame skipping)
-- 3 day skipper (rolling den)
-- autofossil 
-- autoloto (masterball farming)
-- watt farmer
-- turboA (digging bros etc.)
-- berry farmer
-- auto box release
-
-## Useful Auto Hosters by [SPLIT](https://github.com/spl-t/swsh-auto-host)
-
-- softlockHoster (Camp method)
+- CampHoster (Softlock, originally named softlockHoster in his repo)
 - Roll Hoster
 
+## Codes rewritten by [Niffy](https://github.com/Niffilum)
+
+- CampFriendHoster (Added a feature to add the latest Friend Request on Switch)
+- 
 ## thanks & credits
 [progmem](https://github.com/progmem/Switch-Fightstick)
 
