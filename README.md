@@ -66,4 +66,14 @@ Please go to Everyone's respective source to know how to use their codes. All I 
 
 [Split](https://github.com/spl-t/swsh-auto-host)
 
-Bgoproton & Svatinus 
+[Almtr](https://github.com/Almtr/Switch-Fightstick)
+
+[Ironandstee1](https://github.com/ironandstee1/pkmn-auto-hatcher)
+
+[Hoskinw](https://github.com/hoskinsw/SwShEggHatcher/releases)
+
+[Patina27](https://github.com/patina27/Switch-PokemonAutoBreeder)
+
+[Taingmat](https://github.com/taingmat/pokemonss-autobreeder)
+
+Bgoproton, Svatinus, Obviously Not Nate 
