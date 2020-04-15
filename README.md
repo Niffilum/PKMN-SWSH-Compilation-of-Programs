@@ -40,6 +40,15 @@ board software
 - CodeFriendRollHoster (Added a static link code (4400) to the FriendrollHoster)
 - CodeRollHoster (Has the static link code (4400) but not the add friend feature)
 
+## Auto Breeders
+
+- [Niffilum](https://github.com/Niffilum/PKMN-SWSH-Auto-Breeder)
+- [Almtr](https://github.com/Almtr/Switch-Fightstick)
+- [Ironandstee1](https://github.com/ironandstee1/pkmn-auto-hatcher)
+- [Hoskinw](https://github.com/hoskinsw/SwShEggHatcher/releases)
+- [Patina27](https://github.com/patina27/Switch-PokemonAutoBreeder)
+- [Taingmat](https://github.com/taingmat/pokemonss-autobreeder)
+
 ## How to use
 ### Flashing The programs and basic tutorial 
 Made by Brianuu 
